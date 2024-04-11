@@ -48,6 +48,29 @@ $("#userBtn").on("click", function () {
   });
 // 10
 $("#SettingsBtn").on("click", function () {
-    $("#dashboard,#forms,#tables,#charts,#icons,#uielements,#authentication,#pages,#users").css("display", "none");
+    $("#dashboard,#forms,#tables,#charts,#icons,#uielements,#authentication,#pages,#user").css("display", "none");
     $("#Settings").css("display", "block");
   });
+
+
+  // ----------------------------------------------------------------SIDEBAR HIDE&SHOW EFFECT---------------------------------------------------------------- //
+
+
+  $("#content>div").hide();
+$("#user").show();
+
+
+$("#sidebar>button").on("click", function () {
+    $("#content>div").hide();
+   $($(this).attr("for")).show();
+   $("#sidebar").toggle(900,function(){
+    $("#content").css("width","100%")
+})
+});
+
+
+$(".fa-solid").on("click",function(){
+    $("#sidebar").toggle(900,function(){
+        $("#content").css("width","100%")
+    })
+})
