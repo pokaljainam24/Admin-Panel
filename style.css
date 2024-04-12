@@ -7,11 +7,19 @@
 }
 
 body {
+
   height: 100vh;
   background: #f1f1f1;
   font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 1rem;
   color: #444;
+
+  height: 100vh;
+  background: #f1f1f1;
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #000000;
+
 }
 
 /* -------------------------------------------------------------HEADER----------------------------------------------------------- */
@@ -54,9 +62,39 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* height: auto; */
+  width: 100%;
+  /* border: 1px solid #000000; */
+  display: flex;
 }
 
+#nav {
+  background: linear-gradient(40deg, rgb(29, 24, 123) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav>#btn {
+  background-color: #000;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  height: 38px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 /* -------------------------------------------------------------Dropdown button------------------------------------------------------------- */
+
 /* Style the dropdown button */
 .dropbtn {
   background-color: #000000;
@@ -177,6 +215,86 @@ li {
   text-decoration: underline;
 }
 
+.dropbtn {
+  background-color: #000000;
+  border-radius: 20px;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn1 {
+  background-color: #000000;
+  border-radius: 20px;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  border-radius: 20px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  border-radius: 20px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content1 a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: aquamarine;
+}
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #a7a7a7;
+}
+
+.dropdown-content1 a:hover {
+  background-color: #a7a7a7;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* .dropdown:hover .dropdown-content1 {
+    display: block;
+  } */
+
+
 
 /* ------------------------------------------------------------SIDE-BAR---------------------------------------------------------------------- */
 
@@ -188,6 +306,11 @@ li {
 
 #sidebar {
   width: 25%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  width: 20%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -231,4 +354,18 @@ li {
 #dashboard>.card>.div {
   display: flex;
   text-align: center;
+}
+
+#dashboard>.card>.div {
+  display: flex;
+  text-align: center;
+}
+
+.card>.content {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 30px;
+  width: 100%;
+  background-color: #000000;
+  color: #fff;
 }
