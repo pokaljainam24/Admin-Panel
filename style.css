@@ -9,7 +9,7 @@ body {
     background: #f1f1f1;
     font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-size: 1rem;
-    color: #444;
+    color: #000000;
 }
 
 /* -------------------------------------------------------------HEADER----------------------------------------------------------- */
@@ -36,7 +36,7 @@ header {
     display: flex;
     width: 100%;
     height: auto;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +54,9 @@ header {
     justify-content: center;
 }
 
+
 /* -------------------------------------------------------------Dropdown button------------------------------------------------------------- */
+
 .dropbtn {
     background-color: #000000;
     border-radius: 20px;
@@ -100,7 +102,6 @@ header {
     display: block;
   }
   
-  /* Style profile */
   .profile {
     display: inline-block;
     margin-left: 20px;
@@ -126,7 +127,7 @@ header {
 }
 
 #sidebar {
-    width: 25%;
+    width: 20%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -170,4 +171,13 @@ header {
 #dashboard>.card>.div{
     display: flex;
     text-align: center;
+}
+
+.card>.content{
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 30px;
+  width: 100%;
+  background-color: #000000;
+  color: #fff;
 }
