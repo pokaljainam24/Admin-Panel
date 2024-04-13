@@ -29,7 +29,6 @@ header {
 }
 
 #content {
-  /* border: 1px solid #000000; */
   height: 100vh;
   width: 80%;
 }
@@ -37,263 +36,89 @@ header {
 #logo {
   height: auto;
   width: 100%;
-  /* border: 1px solid #000000; */
   display: flex;
 }
 
-#nav {
-  background: linear-gradient(40deg, rgb(29, 24, 123) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
-  display: flex;
-  width: 100%;
-  height: auto;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#nav>#btn {
-  background-color: #000;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 1.5rem;
-  height: 30px;
-  width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /* height: auto; */
-  width: 100%;
-  /* border: 1px solid #000000; */
-  display: flex;
-}
-
-#nav {
-  background: linear-gradient(40deg, rgb(29, 24, 123) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
-  display: flex;
-  width: 100%;
-  height: auto;
-  padding: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#nav>#btn {
-  background-color: #000;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 1.5rem;
-  height: 38px;
-  width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-/* -------------------------------------------------------------Dropdown button------------------------------------------------------------- */
-
-/* Style the dropdown button */
-.dropbtn {
-  background-color: #000000;
-  border-radius: 10px;
+/* -----------------------------------------------------------------nav bar------------------------------------------------------------ */
+#menu {
+  margin: 10px 15px;
+  padding: 0px 10px;
+  height: 40px;
   color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+  background-color: #000000cc;
+  border: 1px solid white;
+  border-radius: 5px;
 }
 
-/* Style the dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f991;
-  min-width: 160px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  padding: 10px;
-}
-
-
-/* Style the links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* -----------------------------------------------------------LogIn Form------------------------------------------------------------------ */
-
-/* Reset some default styles */
-body,
-h1,
-h2,
-h3,
-p,
+a,
 ul,
-li {
-  margin: 0;
-  padding: 0;
-}
-
-/* Style the login container */
-.login-container {
-  width: 100%;
-  max-width: 400px;
-  margin: 100px auto;
+span {
+  text-decoration: none;
+  list-style: none;
   padding: 20px;
-  background: linear-gradient(40deg, rgb(29, 24, 123) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the form inside the container */
-.login-container form {
+.links {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  font-size: 1rem;
 }
 
-/* Style form inputs and labels */
-.input-group {
-  margin-bottom: 20px;
-}
-
-.input-group label {
-  font-weight: bold;
-}
-
-.input-group input {
+nav {
+  color: #b2ebf2;
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-/* Style the login button */
-.btn {
-  padding: 10px;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #2980b9;
-}
-
-/* Style the extra links */
-.extra-links {
-  margin-top: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  background-color: #050505;
+
 }
 
-.extra-links a {
-  text-decoration: none;
-  color: #3498db;
-}
-
-.extra-links a:hover {
-  text-decoration: underline;
-}
-
-.dropbtn {
-  background-color: #000000;
-  border-radius: 20px;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn1 {
-  background-color: #000000;
-  border-radius: 20px;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  position: relative;
-}
-
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
+ul {
   position: absolute;
-  border-radius: 20px;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  color: #f8f9fa;
+  background: #f8f9fa;
+  margin-top: 16px;
+  font-size: 1.5rem;
+  visibility: hidden;
+  border-radius: 6px;
+  box-shadow: 0px 0px 5px black;
+}
+
+nav>.links>span:hover ul {
+  visibility: visible;
   z-index: 1;
 }
 
-.dropdown-content1 {
-  display: none;
-  position: absolute;
-  border-radius: 20px;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+li {
+  padding: 2px;
+  width: 100%;
+  margin-left: 5px;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+#span1>ul>li>a,
+#span2>ul>li>a {
+  color: #00000088;
 }
 
-.dropdown-content1 a {
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  background-color: aquamarine;
+li:nth-child(3) {
+  border-bottom: none;
 }
 
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #a7a7a7;
+.links>span:nth-child(2)>ul>li {
+  border: none;
 }
 
-.dropdown-content1 a:hover {
-  background-color: #a7a7a7;
+hr {
+  margin-left: 10px;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
+.fa-solid:hover {
+  cursor: pointer;
 }
 
-/* .dropdown:hover .dropdown-content1 {
-    display: block;
-  } */
-
+/* ----------------------------------------------------nav bar--------------------------------------------------- */
 
 
 /* ------------------------------------------------------------SIDE-BAR---------------------------------------------------------------------- */
@@ -340,6 +165,9 @@ li {
   background: linear-gradient(rgba(54, 46, 203, 0.792) 0%, rgba(9, 9, 121, 0.594) 35%, rgba(0, 212, 255, 1) 100%);
   color: #000;
 }
+
+/* ---------------------------------------------SIDE-BAR------------------------------------------------- */
+
 
 /* ---------------------------------------------------------CONTENT-CARD---------------------------------------------------------------------- */
 

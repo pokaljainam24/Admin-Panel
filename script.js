@@ -74,3 +74,11 @@ $(".fa-solid").on("click", function () {
     $("#content").css("width", "100%")
   })
 });
+
+//////////////////////////////////////////////////// navbar links mouseover-leave color effect////////////////////////////////////////////////////
+$("#span1,#span2").on("mouseenter", function () {
+  $(this).css("color", "white");
+});
+$("#span1,#span2").on("mouseleave", function () {
+  $(this).css("color", "#B2EBF2");
+});
