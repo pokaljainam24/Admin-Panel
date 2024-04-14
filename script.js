@@ -169,7 +169,7 @@ function clearErrors() {
 
 ///////////////////////////////////////////////////////////////////// CHARTS CONTENT ////////////////////////////////////////////////////////////
 
-var ctx = document.getElementById('myChart').getContext('2d');
+var ctx = document.getElementById('polarArea').getContext('2d');
 
 // Define data for the chart
 var data = {
@@ -196,7 +196,7 @@ var options = {
 
 // Create the chart
 var myChart = new Chart(ctx, {
-  type: 'bar',
+  type: 'polarArea',
   data: data,
   options: options
 });

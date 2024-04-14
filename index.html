@@ -67,7 +67,7 @@
             </button>
         </div>
 
-<!------------------------------------------------ Right Side Content Page  ------------------------------------------------->
+        <!------------------------------------------------------------ Right Side HEADER  ------------------------------------------------------------>
 
         <div id="content">
 
@@ -101,9 +101,11 @@
                         </span>
 
                         <span id="span2">
-                            <button style="background-color: black; color: white; border: none;"><i
-                                    class="fa-solid fa-user"></i> Jainam Pokal <i
-                                    class="fa-solid fa-caret-down"></i></button>
+                            <button style="background-color: black; color: white; border: none;">
+                                <i class="fa-solid fa-user-secret"></i> Jainam Pokal 
+                                <i class="fa-solid fa-caret-down"></i>
+                            </button>
+                            
                             <ul href="">
                                 <li>
                                     <a href=""><i class="fa-solid fa-address-card"></i> Profile</a>
@@ -125,7 +127,7 @@
 
             </header>
 
-<!----------------------------------------------------- RIGHT CONTAINER CONTENT DETAILS ---------------------------------------------------->
+            <!----------------------------------------------------- RIGHT CONTAINER CONTENT DETAILS ---------------------------------------------------->
 
             <div id="dashboard">
                 <div class="card">
@@ -210,7 +212,7 @@
                 </div>
             </div>
 
-<!-------------------------------------------------------------- FORMS SECTION ----------------------------------------------------------------->
+            <!-------------------------------------------------------------- FORMS SECTION ----------------------------------------------------------------->
 
             <div id="forms">
                 <div class="Container">
@@ -250,14 +252,16 @@
                 </div>
             </div>
 
-<!-------------------------------------------------------------- TABLES SECTION -------------------------------------------------------------->
+            <!-------------------------------------------------------------- TABLES SECTION -------------------------------------------------------------->
 
             <div id="tables">Hello Tables</div>
 
-<!--------------------------------------------------------------- CHATS SECTION -------------------------------------------------------------->
+            <!--------------------------------------------------------------- CHATS SECTION -------------------------------------------------------------->
 
             <div id="charts">
-                <canvas id="myChart" width="100%" height="100vh"></canvas>
+                <p class="card-title">polarArea</p>
+                <canvas class="chart chartjs-render-monitor" id="polarArea" width="593" height="296"
+                    style="display: block; width: 593px; height: 296px;"></canvas>
 
                 <div class="row">
                     <div class="col-md-6 col-lg-12">
@@ -265,76 +269,130 @@
                             <div class="card-header">Line Chart</div>
                             <div class="card-body">
                                 <p class="card-title"></p>
-                                <div class="canvas-wrapper"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                                    <canvas class="chart chartjs-render-monitor" id="linechart" width="593" height="296" style="display: block; width: 593px; height: 296px;"></canvas>
+                                <div class="canvas-wrapper">
+                                    <div class="chartjs-size-monitor">
+                                        <div class="chartjs-size-monitor-expand">
+                                            <div class=""></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink">
+                                            <div class=""></div>
+                                        </div>
+                                    </div>
+                                    <canvas class="chart chartjs-render-monitor" id="linechart" width="593" height="296"
+                                        style="display: block; width: 593px; height: 296px;"></canvas>
                                 </div>
                             </div>
                         </div>
                     </div>
-                  
+
                     <div class="col-md-6 col-lg-12">
                         <div class="card">
                             <div class="card-header">Bar Chart</div>
                             <div class="card-body">
                                 <p class="card-title"></p>
-                                <div class="canvas-wrapper"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                                    <canvas class="chart chartjs-render-monitor" id="barchart" width="593" height="296" style="display: block; width: 593px; height: 296px;"></canvas>
+                                <div class="canvas-wrapper">
+                                    <div class="chartjs-size-monitor">
+                                        <div class="chartjs-size-monitor-expand">
+                                            <div class=""></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink">
+                                            <div class=""></div>
+                                        </div>
+                                    </div>
+                                    <canvas class="chart chartjs-render-monitor" id="barchart" width="593" height="296"
+                                        style="display: block; width: 593px; height: 296px;"></canvas>
                                 </div>
                             </div>
                         </div>
                     </div>
-                  
+
                     <div class="col-md-6 col-lg-12">
                         <div class="card">
                             <div class="card-header">Pie Chart</div>
                             <div class="card-body">
                                 <p class="card-title"></p>
-                                <div class="canvas-wrapper"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                                    <canvas class="chart chartjs-render-monitor" id="piechart" width="593" height="296" style="display: block; width: 593px; height: 296px;"></canvas>
+                                <div class="canvas-wrapper">
+                                    <div class="chartjs-size-monitor">
+                                        <div class="chartjs-size-monitor-expand">
+                                            <div class=""></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink">
+                                            <div class=""></div>
+                                        </div>
+                                    </div>
+                                    <canvas class="chart chartjs-render-monitor" id="piechart" width="593" height="296"
+                                        style="display: block; width: 593px; height: 296px;"></canvas>
                                 </div>
                             </div>
                         </div>
                     </div>
-                  
+
                     <div class="col-md-6 col-lg-12">
                         <div class="card">
                             <div class="card-header">Donut Chart</div>
                             <div class="card-body">
                                 <p class="card-title"></p>
-                                <div class="canvas-wrapper"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                                    <canvas class="chart chartjs-render-monitor" id="doughnutchart" width="593" height="296" style="display: block; width: 593px; height: 296px;"></canvas>
+                                <div class="canvas-wrapper">
+                                    <div class="chartjs-size-monitor">
+                                        <div class="chartjs-size-monitor-expand">
+                                            <div class=""></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink">
+                                            <div class=""></div>
+                                        </div>
+                                    </div>
+                                    <canvas class="chart chartjs-render-monitor" id="doughnutchart" width="593"
+                                        height="296" style="display: block; width: 593px; height: 296px;"></canvas>
                                 </div>
                             </div>
                         </div>
                     </div>
-                  
+
                     <div class="col-md-6 col-lg-12">
                         <div class="card">
                             <div class="card-header"></div>
-        
+
                             <div class="card-body">
                                 <p class="card-title">Stacked Bar Chart</p>
-                                <div class="canvas-wrapper"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                                    <canvas class="chart chartjs-render-monitor" id="stackedbarchart" width="593" height="296" style="display: block; width: 593px; height: 296px;"></canvas>
+                                <div class="canvas-wrapper">
+                                    <div class="chartjs-size-monitor">
+                                        <div class="chartjs-size-monitor-expand">
+                                            <div class=""></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink">
+                                            <div class=""></div>
+                                        </div>
+                                    </div>
+                                    <canvas class="chart chartjs-render-monitor" id="stackedbarchart" width="593"
+                                        height="296" style="display: block; width: 593px; height: 296px;"></canvas>
                                 </div>
                             </div>
                         </div>
                     </div>
-                  
+
                     <div class="col-md-6 col-lg-12">
                         <div class="card">
                             <div class="card-header"></div>
-                            
+
                             <div class="card-body">
                                 <p class="card-title">Radar Chart</p>
-                                <div class="canvas-wrapper"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                                    <canvas class="chart chartjs-render-monitor" id="radarchart" width="593" height="296" style="display: block; width: 593px; height: 296px;"></canvas>
+                                <div class="canvas-wrapper">
+                                    <div class="chartjs-size-monitor">
+                                        <div class="chartjs-size-monitor-expand">
+                                            <div class=""></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink">
+                                            <div class=""></div>
+                                        </div>
+                                    </div>
+                                    <canvas class="chart chartjs-render-monitor" id="radarchart" width="593"
+                                        height="296" style="display: block; width: 593px; height: 296px;"></canvas>
                                 </div>
                             </div>
                         </div>
                     </div>
-                  
-                  </div>
+
+                </div>
             </div>
 
             <div id="icons">Hello Icons</div>
@@ -379,7 +437,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    </script>
+        </script>
 
     <script src="./script.js"></script>
 </body>
