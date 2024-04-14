@@ -1,19 +1,10 @@
-*,
-::after,
-::before {
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
 body {
-
-  height: 100vh;
-  background: #f1f1f1;
-  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  color: #444;
-
   height: 100vh;
   background: #f1f1f1;
   font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -34,9 +25,7 @@ header {
 }
 
 #logo {
-  height: auto;
-  width: 100%;
-  display: flex;
+  background-color: #000000;
 }
 
 /* -----------------------------------------------------------------nav bar------------------------------------------------------------ */
@@ -55,7 +44,7 @@ ul,
 span {
   text-decoration: none;
   list-style: none;
-  padding: 20px;
+  padding: 10px;
 }
 
 .links {
@@ -70,7 +59,7 @@ nav {
   color: #b2ebf2;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color: #050505;
 
 }
@@ -118,7 +107,88 @@ hr {
   cursor: pointer;
 }
 
-/* ----------------------------------------------------nav bar--------------------------------------------------- */
+/* ------------------------------------------------------LOGIN FORM-------------------------------------------------------- */
+
+.container>form {
+  width: 100%;
+  margin: 50px auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  z-index: 5;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+.form-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.form-footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.modelbg {
+  /* height: 90vh; */
+  /* width: 80%; */
+  position: absolute;
+  top: 55px;
+  left: 254px;
+  filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* ----------------------------------------------------NAV-BAR-OVER--------------------------------------------------- */
 
 
 /* ------------------------------------------------------------SIDE-BAR---------------------------------------------------------------------- */
@@ -166,13 +236,13 @@ hr {
   color: #000;
 }
 
-/* ---------------------------------------------SIDE-BAR------------------------------------------------- */
+/* ---------------------------------------------SIDE-BAR-OVER------------------------------------------------- */
 
 
 /* ---------------------------------------------------------CONTENT-CARD---------------------------------------------------------------------- */
 
 #dashboard {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -190,10 +260,72 @@ hr {
 }
 
 .card>.content {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   border-radius: 10px;
   padding: 30px;
   width: 100%;
-  background-color: #000000;
-  color: #fff;
+  background-color: #f8f8f8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+/* ---------------------------------------------------------CONTENT-CARD FORMS---------------------------------------------------------------------- */
+
+
+.Container {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.form-group.invalid input {
+  border-color: red;
+}
+
+.form-group.valid input {
+  border-color: green;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }

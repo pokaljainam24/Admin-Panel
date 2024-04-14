@@ -57,7 +57,7 @@
 
 
 $("#content>div").hide();
-$("#user").hide();
+$("#dashboard").show();
 
 
 $("#sidebar>button").on("click", function () {
@@ -76,9 +76,93 @@ $(".fa-solid").on("click", function () {
 });
 
 //////////////////////////////////////////////////// navbar links mouseover-leave color effect////////////////////////////////////////////////////
-$("#span1,#span2").on("mouseenter", function () {
-  $(this).css("color", "white");
+
+                                                  $("#span1,#span2").on("mouseenter", function () {
+                                                  $(this).css("color", "white");
+                                                  });
+                                                  $("#span1,#span2").on("mouseleave", function () {
+                                                    $(this).css("color", "#B2EBF2");
+                                                  });
+
+//////////////////////////////////////////////////// navbar links mouseover-leave color effect////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////// LOGIN FORM POPUP ////////////////////////////////////////////////////////////
+
+$(".container,.modelbg").hide();
+$(".fa-pen-nib").on("click", function () {
+  $(".container,.modelbg").toggle();
 });
-$("#span1,#span2").on("mouseleave", function () {
-  $(this).css("color", "#B2EBF2");
-});
+
+/////////////////////////////////////////////////////////////// LOGIN FORM POPUP /////////////////////////////////////////////////////////////
+
+
+
+///////////////////////////////////////////////////////////////CONTENT-CARD FORMS/////////////////////////////////////////////////////////////
+
+                                            const form = document.getElementById('myForm');
+                                            const nameInput = document.getElementById('name');
+                                            const emailInput = document.getElementById('email');
+                                            const ageInput = document.getElementById('age');
+                                            const genderInput = document.getElementById('gender');
+
+                                            form.addEventListener('submit', function (event) {
+                                              event.preventDefault();
+                                              if (validateForm()) {
+                                                // Form is valid, you can submit it
+                                                alert('Form submitted successfully!');
+                                              }
+                                            });
+
+                                            function validateForm() {
+                                              let isValid = true;
+
+                                              // Resetting previous errors
+                                              clearErrors();
+
+                                              // Validating Name
+                                              if (nameInput.value.trim() === '') {
+                                                setErrorFor(nameInput, 'Name cannot be blank');
+                                                isValid = false;
+                                              }
+
+                                              // Validating Email
+                                              const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                                              if (!emailPattern.test(emailInput.value.trim())) {
+                                                setErrorFor(emailInput, 'Please enter a valid email address');
+                                                isValid = false;
+                                              }
+
+                                              // Validating Age
+                                              if (isNaN(ageInput.value.trim()) || ageInput.value.trim() === '') {
+                                                setErrorFor(ageInput, 'Please enter a valid age');
+                                                isValid = false;
+                                              }
+
+                                              // Validating Gender
+                                              if (genderInput.value.trim() === '') {
+                                                setErrorFor(genderInput, 'Please select your gender');
+                                                isValid = false;
+                                              }
+
+                                              return isValid;
+                                            }
+
+                                            function setErrorFor(input, message) {
+                                              const formGroup = input.parentElement;
+                                              const errorSpan = formGroup.querySelector('.error-message');
+                                              errorSpan.innerText = message;
+                                              formGroup.classList.add('invalid');
+                                            }
+
+                                            function clearErrors() {
+                                              const errorMessages = document.querySelectorAll('.error-message');
+                                              errorMessages.forEach(function (error) {
+                                                error.innerText = '';
+                                              });
+
+                                              const formGroups = document.querySelectorAll('.form-group');
+                                              formGroups.forEach(function (group) {
+                                                group.classList.remove('invalid');
+                                              });
+                                            }

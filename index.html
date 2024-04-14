@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/unnamed.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,22 +17,51 @@
     <div id="main">
         <div id="sidebar">
             <div id="logo">
-                <img height="100%" width="100%" id="admin-logo" src="./images/logo-1.png" alt="logo">
+                <img height="100%" width="100%" id="admin-logo" src="./images/logo1.1.png" alt="logo">
             </div>
 
-            <button for="#dashboard" id="dashboardBtn"><i class="fa-solid fa-house-user"></i>Dashboard</button>
-            <button id="formsBtn"><i class="fa-solid fa-file"></i>Forms</button>
-            <button id="tablesBtn"><i class="fa-solid fa-table"></i>Tables</button>
-            <button id="chartsBtn"><i class="fa-solid fa-chart-area"></i>Charts</button>
-            <button id="iconsBtn"><i class="fa-solid fa-icons"></i>Icons</button>
-            <button id="uielementsBtn"><i class="fa-solid fa-layer-group"></i>UI Elements</button>
-            <button id="authenticationBtn"><i class="fa-solid fa-user-shield"></i>Authentication</button>
-            <button id="pagesBtn"><i class="fa-regular fa-file"></i>Pages</button>
-            <button id="userBtn"><i class="fa-solid fa-users"></i>Users</button>
-            <button id="SettingsBtn"><i class="fa-solid fa-gears"></i>Settings</button>
+            <button for="#dashboard" id="dashboardBtn">
+                <i class="fa-solid fa-house-user"></i>Dashboard
+            </button>
+
+            <button for="#forms" id="formsBtn">
+                <i class="fa-solid fa-file"></i>Forms
+            </button>
+
+            <button id="tablesBtn">
+                <i class="fa-solid fa-table"></i>Tables
+            </button>
+
+            <button id="chartsBtn">
+                <i class="fa-solid fa-chart-area"></i>Charts
+            </button>
+
+            <button id="iconsBtn">
+                <i class="fa-solid fa-icons"></i>Icons
+            </button>
+
+            <button id="uielementsBtn">
+                <i class="fa-solid fa-layer-group"></i>UI Elements
+            </button>
+
+            <button id="authenticationBtn">
+                <i class="fa-solid fa-user-shield"></i>Authentication
+            </button>
+
+            <button id="pagesBtn">
+                <i class="fa-regular fa-file"></i>Pages
+            </button>
+
+            <button id="userBtn">
+                <i class="fa-solid fa-users"></i>Users
+            </button>
+
+            <button id="SettingsBtn">
+                <i class="fa-solid fa-gears"></i>Settings
+            </button>
         </div>
 
-<!------------------------------------------------ Right Side Content Page  ------------------------------------------------->
+        <!------------------------------------------------ Right Side Content Page  ------------------------------------------------->
 
         <div id="content">
 
@@ -39,12 +69,15 @@
                 <nav>
                     <button id="menu"><i class="fa-solid fa-bars"></i></button>
 
-                    <div class="links"> 
+                    <div class="links">
 
-                        <i class="fa-solid fa-pen-nib" style="margin: auto; font-size: 1.5rem; padding: 10px;" ></i>
+                        <i class="fa-solid fa-pen-nib"
+                            style="margin: auto; font-size: 1.5rem; padding: 10px; color: red;"></i>
 
                         <span id="span1">
-                           <button style="background-color: black; color: white; border: none;"><i class="fa-solid fa-link"></i> Quick Links <i class="fa-solid fa-caret-down"></i></button> 
+                            <button style="background-color: black; color: white; border: none;"><i
+                                    class="fa-solid fa-link"></i> Quick Links <i
+                                    class="fa-solid fa-caret-down"></i></button>
                             <ul href="">
                                 <li>
                                     <a href=""><i class="fa-solid fa-list"></i> Access Logs</a>
@@ -62,7 +95,9 @@
                         </span>
 
                         <span id="span2">
-                            <button style="background-color: black; color: white; border: none;"><i class="fa-solid fa-user"></i> Jainam Pokal <i class="fa-solid fa-caret-down"></i></button>
+                            <button style="background-color: black; color: white; border: none;"><i
+                                    class="fa-solid fa-user"></i> Jainam Pokal <i
+                                    class="fa-solid fa-caret-down"></i></button>
                             <ul href="">
                                 <li>
                                     <a href=""><i class="fa-solid fa-address-card"></i> Profile</a>
@@ -73,7 +108,7 @@
                                 <li>
                                     <a href=""><i class="fa-solid fa-gear"></i> Settings</a>
                                 </li>
-                                <hr />
+                                <hr/>
                                 <li>
                                     <a href=""><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                                 </li>
@@ -83,6 +118,8 @@
                 </nav>
 
             </header>
+
+<!----------------------------------------------------- RIGHT CONTAINER CONTENT DETAILS ---------------------------------------------------->
 
             <div id="dashboard">
                 <div class="card">
@@ -167,7 +204,43 @@
                 </div>
             </div>
 
-            <div id="forms">Hello Forms</div>
+            <div id="forms">
+                <div class="Container">
+                    <h2>Form Validation</h2>
+                    <form id="myForm" action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name">
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email">
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="age">Age:</label>
+                            <input type="number" id="age" name="age">
+                            <span class="error-message" id="ageError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">Gender:</label>
+                            <select id="gender" name="gender">
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="error-message" id="genderError"></span>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
             <div id="tables">Hello Tables</div>
             <div id="charts">Hello Charts</div>
             <div id="icons">Hello Icons</div>
@@ -177,13 +250,43 @@
             <div id="user">Hello User</div>
             <div id="Settings">Hello Settings</div>
         </div>
+
+        <div class="container">
+
+            <h2>Login</h2>
+
+            <form id="loginForm" action="#" method="post">
+
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                </div>
+
+                <button type="submit" class="submit-btn">Login</button>
+
+                <div class="form-footer">
+                    <a href="#">Forgot password?</a> | <a href="#">Create an account</a>
+                </div>
+
+            </form>
+
+            <div class="modelbg"></div>
+
+        </div>
     </div>
 
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+
     <script src="./script.js"></script>
 </body>
 
