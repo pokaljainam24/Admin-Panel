@@ -22,6 +22,7 @@ header {
 #content {
   height: 100vh;
   width: 80%;
+  overflow-y:scroll;
 }
 
 #logo {
@@ -29,6 +30,7 @@ header {
 }
 
 /* -----------------------------------------------------------------nav bar------------------------------------------------------------ */
+
 #menu {
   margin: 10px 15px;
   padding: 0px 10px;
@@ -48,19 +50,19 @@ span {
 
 .links {
   display: flex;
-  justify-content: flex-start;
   gap: 10px;
   align-items: center;
   font-size: 1rem;
+  margin-right: 500px;
 }
 
 nav {
   color: #b2ebf2;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   background-color: #050505;
-
+  position: fixed;
 }
 
 ul {
@@ -193,8 +195,9 @@ h2 {
 
 #main {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
+  overflow: hidden;
 }
 
 #sidebar {
@@ -215,9 +218,8 @@ h2 {
   border: none;
   background-color: rgb(0, 0, 0);
   color: rgb(245, 245, 245);
-  padding: 30px;
+  padding: 27px;
   display: flex;
-  gap: 10px;
   justify-content: center;
   font-size: 1.5rem;
   align-items: center;
@@ -235,11 +237,11 @@ h2 {
 /* ---------------------------------------------------------CONTENT-CARD-DASHBOARD---------------------------------------------------------------------- */
 
 #dashboard {
-  /* border: 1px solid #000; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  margin-top: 80px;
 }
 
 #dashboard>.card>.div {
@@ -258,9 +260,10 @@ h2 {
   padding: 30px;
   width: 100%;
   background-color: #f8f8f8;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.671);
   color: #000000;
 }
+
 
 /* -----------------------------------------------------------CONTENT-CARD-FORMS---------------------------------------------------------------------- */
 
@@ -321,4 +324,12 @@ h2 {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+}
+
+
+.row{
+  display: grid;
+  grid-template-columns:repeat(2,1fr);
+  justify-content: space-between;
+  padding: 10px;
 }

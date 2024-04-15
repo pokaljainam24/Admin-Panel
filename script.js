@@ -58,6 +58,7 @@
 
 $("#content>div").hide();
 $("#charts").show();
+$("#dashboard").show();
 
 
 $("#sidebar>button").on("click", function () {
@@ -194,14 +195,15 @@ var options = {
   }
 };
 
-// Create the chart
+//  Create the chart
 var myChart = new Chart(ctx, {
   type: 'polarArea',
   data: data,
   options: options
 });
 
-// LINE CHART //
+
+// ------------------------------LINE CHART---------------------------- //
 
 var chart1 = document.getElementById("linechart");
 var chart2 = document.getElementById('barchart');
@@ -247,84 +249,8 @@ var myChart1 = new Chart(chart1, {
     }
 });
 
-// BAR CHART //
 
-var myChart2 = new Chart(chart2, {
-    type: 'bar',
-    data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [{
-            label: 'Income',
-            backgroundColor: "rgba(54, 162, 235, 0.5)",
-            borderColor: "rgb(54, 162, 235)",
-            borderWidth: 1,
-            data: ["20","30","40","50","60","70","80"],
-        }, {
-            label: 'Expenses',
-            backgroundColor: "rgba(244, 67, 54, 0.5)",
-            borderColor: "rgb(255, 99, 132)",
-            borderWidth: 1,
-            data: ["5","15","25","35","45","35","25"],
-        }]
-    },
-    options: {
-        responsive: true,
-        title: {display: false,text: 'Chart'},
-        legend: {position: 'top',display: true,},
-        tooltips: {mode: 'index',intersect: false,},
-        hover: {mode: 'nearest',intersect: true},
-        scales: {
-            xAxes: [{
-                display: true,
-                scaleLabel: {
-                    display: true,
-                    labelString: 'Months'
-                }
-            }],
-            yAxes: [{
-                display: true,
-                scaleLabel: {
-                    display: true,
-                    labelString: 'Revenue'
-                }
-            }]
-        }
-    }
-});
-
-// PIE CHART //
-
-var myChart3 = new Chart(chart3, {
-    type: 'pie',
-    data: {
-        labels: ["Engineering","Customer Support","Operations","Marketing","R and D"],
-        datasets: [{
-            data: ["62","80","30","25","17"],
-            backgroundColor: ["#009688","#795548","#673AB7","#2196F3","#6da252"],
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        legend: {display: true,fullWidth: true,position: 'right',},
-        tooltips: {
-            callbacks: {
-                label: function(tooltipItem, data) {
-                    var allData = data.datasets[tooltipItem.datasetIndex].data;
-                    var tooltipLabel = data.labels[tooltipItem.index];
-                    var tooltipData = allData[tooltipItem.index];
-                    var total = 0;
-                    var label = tooltipLabel.split(" - ");
-                    for (var i in allData) {total += allData[i];}
-                    var tooltipPercentage = Math.round((tooltipData / total) * 100);
-                    return label[0] + ' (' + tooltipPercentage + '%)';
-                }
-            }
-        },
-    }
-});
-
-// DOUGHNUT CHART //
+// -----------------------------------------------------DOUGHNUT CHART----------------------------------------- //
 
 var myChart4 = new Chart(chart4, {
     type: 'doughnut',
@@ -356,7 +282,7 @@ var myChart4 = new Chart(chart4, {
     }
 });
 
-// BAR CHART //
+// --------------------------------------------------BAR CHART-------------------------------------------- //
 
 var myChart5 = new Chart(chart5, {
     type: 'bar',
@@ -406,26 +332,3 @@ var myChart5 = new Chart(chart5, {
     }
 });
 
-// RADAR CHART //
-
-var mychart6 = new Chart(chart6, {
-    type: 'radar',
-    data: {
-        labels: ['Age 18-24', 'Age 25-31', 'Age 32-38', 'Age 39-45', 'Age 46-100+'],
-        datasets: [{
-            label: '',
-            backgroundColor : "rgba(48, 164, 255, 0.2)",
-            borderColor : "rgba(48, 164, 255, 0.8)",
-            pointBackgroundColor : "rgba(48, 164, 255, 1)",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#fff",
-            pointHighlightStroke : "rgba(48, 164, 255, 1)",
-            data: ["26","35","25","28","18"],
-        }]
-    },
-    options: {
-        legend: {position: 'top',display: false,},
-        title: {display: true,text: 'Age Groups'},
-        scale: {ticks: {beginAtZero: true}}
-    }
-});
