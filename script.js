@@ -332,3 +332,55 @@ var myChart5 = new Chart(chart5, {
     }
 });
 
+
+
+// COUNTER IN DASHBOARD CARD CONTENT ---------------------------------------------------------
+
+$("#counter").counter({
+  autoStart: true,          
+  duration: 1000,          
+  countFrom: 10,    
+  countTo: 6267,               
+  runOnce: false,    
+  placeholder: "6,267",     
+                      
+  easing: "easeOutCubic",     
+                              
+  // onStart: function() {},     
+  // onComplete: function() {},  
+  // numberFormatter:            
+  //   function(number) {
+  //     return "$ " + number;
+  //   }
+});
+
+$("#counter2").counter({
+  autoStart: true,          
+  duration: 1000,          
+  countFrom: 10,    
+  countTo: 180900,               
+  runOnce: false,    
+  placeholder: "$180,900",     
+                      
+  easing: "easeOutCubic",     
+                              
+  onStart: function() {},     
+  onComplete: function() {},  
+  numberFormatter:            
+    function(number) {
+      return "$ " + number;
+    }
+});
+
+$("#counter3").counter({
+  autoStart: true,          
+  duration: 1000,          
+  countFrom: 100,    
+  countTo: 28210,               
+  runOnce: false,    
+  placeholder: "28,210",     
+                      
+  easing: "easeOutCubic",     
+                              
+  
+});

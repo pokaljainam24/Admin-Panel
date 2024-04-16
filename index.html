@@ -144,7 +144,7 @@
                             <div class="col-sm-8">
                                 <div class="detail text-center">
                                     <p>New Orders</p>
-                                    <span class="number">6,267</span>
+                                    <span id="counter">6,267</span>
                                 </div>
                             </div>
                         </div>
@@ -152,7 +152,7 @@
                         <div class="footer">
                             <hr><br>
                             <div class="stats">
-                                <i class="fas fa-redo-alt"></i> Updated every 30 minutes
+                                <i class="fas fa-redo-alt"></i><span class="end">Updated every 30 minutes</span>
                             </div>
                         </div>
                     </div>
@@ -171,7 +171,7 @@
                             <div class="col-sm-8">
                                 <div class="detail text-center">
                                     <p>Revenue</p>
-                                    <span class="number">$180,900.00</span>
+                                    <span id="counter2">$180,900</span>
                                 </div>
                             </div>
                         </div>
@@ -179,7 +179,7 @@
                         <div class="footer">
                             <hr><br>
                             <div class="stats">
-                                <i class="fa-solid fa-calendar"></i> In this current Month
+                                <i class="fa-solid fa-calendar"></i><span class="end">In this current Month</span>
                             </div>
                         </div>
                     </div>
@@ -198,7 +198,7 @@
                             <div class="col-sm-8">
                                 <div class="detail text-center">
                                     <p>Page views</p>
-                                    <span class="number">28,210</span>
+                                    <span id="counter3">28,210</span>
                                 </div>
                             </div>
                         </div>
@@ -206,39 +206,12 @@
                         <div class="footer">
                             <hr><br>
                             <div class="stats">
-                                <i class="fa-solid fa-stopwatch"></i> In the last 24 Hour
+                                <i class="fa-solid fa-stopwatch"></i><span class="end">In the last 24 Hour</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-
-
-                <div class="card">
-                    <div class="content">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="icon-big text-center" style="font-size: 2rem;">
-                                    <i class="fa-solid fa-envelope" style="color: orange;"></i>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-8">
-                                <div class="detail text-center">
-                                    <p>Support Request</p>
-                                    <span class="number">75</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="footer">
-                            <hr><br>
-                            <div class="stats">
-                                <i class="fa-solid fa-envelope-open-text"></i> Active in the last 7 days
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
 
@@ -293,7 +266,7 @@
 
                 <div class="row">
 
-                    <div class="col-md-6 col-lg-12" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.596);">
+                    <div class="col-md-6" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.596);">
                         <div class="card" style="padding: 20px; ">
                             <div class="card-header">polarArea</div>
 
@@ -316,7 +289,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-12" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.596);">
+                    <div class="col-md-6" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.596);">
                         <div class="card" style="padding:20px">
                             <div class="card-header">Line Chart</div>
 
@@ -332,14 +305,14 @@
                                     </div>
 
                                     <canvas class="chart chartjs-render-monitor" id="linechart"
-                                        style="width: 500px; height: 400px; padding: 10px; margin: auto;">
+                                        style="width: 600px; height: 500px; padding: 10px; margin: auto;">
                                     </canvas>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-12" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.596);">
+                    <div class="col-md-6" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.596);">
                         <div class="card" style="padding: 20px;">
                             <div class="card-header">Stacked Bar Chart</div>
 
@@ -351,14 +324,14 @@
                                     </div>
 
                                     <canvas class="chart chartjs-render-monitor" id="stackedbarchart"
-                                        style="width: 500px; height: 400px; padding: 10px; margin: auto;">
+                                        style="width: 600px; height: 500px; padding: 10px; margin: auto;">
                                     </canvas>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-12" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.726);">
+                    <div class="col-md-6" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.726);">
                         <div class="card" style="padding: 20px;">
                             <div class="card-header">Donut Chart</div>
 
@@ -382,6 +355,8 @@
                     </div>
 
                 </div>
+
+                
             </div>
 
             <div id="icons">Hello Icons</div>
@@ -428,6 +403,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.js"
+        integrity="sha512-brrjTp9G6MkKX5QjXwwAQkscfFpKi3okjyZ/M3vGwwg9qI1msoz7z+EbQBLXsTnVK3POjYBGHcQvX34GFKr/7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+
+    <script src="./counter.js"></script>
     <script src="./script.js"></script>
 </body>
 

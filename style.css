@@ -8,7 +8,6 @@ body {
   height: 100vh;
   background: #f1f1f1;
   font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  /* font-size: 1rem; */
   color: #000000;
 
 }
@@ -23,6 +22,10 @@ header {
   height: 100vh;
   width: 80%;
   overflow-y:scroll;
+}
+
+#content::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
 #logo {
@@ -229,7 +232,7 @@ h2 {
 
 #dashboard {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
   margin-top: 80px;
@@ -248,10 +251,6 @@ h2 {
   color: #000000;
 }
 
-.card{
-  width: 300px;
-}
-
 p{
   text-align: center;
   padding: 10px;
@@ -262,6 +261,12 @@ p{
   align-items: center;
   color: #4CAF50;
 }
+
+.end{
+  text-align: center;
+  padding: 10px;
+}
+
 
 
 /* -----------------------------------------------------------CONTENT-CARD-FORMS---------------------------------------------------------------------- */
@@ -328,7 +333,7 @@ h2 {
 /* ------------------------------ CHART SECTION ------------------------------------------------------------------ */
 
 #charts{
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 
