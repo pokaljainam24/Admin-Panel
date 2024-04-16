@@ -327,9 +327,16 @@ h2 {
 }
 
 
+/*------------------------------------------------------------------ CHARTS CONTENT ------------------------------------------------------------------------*/
+
+#charts{
+  margin-top: 100px;
+}
+
 .row{
   display: grid;
   grid-template-columns:repeat(2,1fr);
+  gap: 20px;
   justify-content: space-between;
   padding: 10px;
 }
