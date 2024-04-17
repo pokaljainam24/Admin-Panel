@@ -135,9 +135,9 @@ function validateForm() {
   }
 
   // Validating Age
-  if (isNaN(ageInput.value.trim()) || ageInput.value.trim() === '') {
+  if (isNaN(ageInput.value.trim()) || ageInput.value.trim() === '18') {
     setErrorFor(ageInput, 'Please enter a valid age');
-    isValid = false;
+    isValid = true;
   }
 
   // Validating Gender
@@ -346,15 +346,9 @@ $("#counter").counter({
 
   easing: "easeOutCubic",
 
-  // onStart: function() {},     
-  // onComplete: function() {},  
-  // numberFormatter:            
-  //   function(number) {
-  //     return "$ " + number;
-  //   }
+ 
 });
 
-<<<<<<< HEAD
 // $("#counter2").counter({
 //   autoStart: true,          
 //   duration: 1000,          
@@ -372,25 +366,7 @@ $("#counter").counter({
 //       return "$ " + number;
 //     }
 // });
-=======
-$("#counter2").counter({
-  autoStart: true,
-  duration: 1000,
-  countFrom: 10,
-  countTo: 180900,
-  runOnce: false,
-  placeholder: "$180,900",
 
-  easing: "easeOutCubic",
-
-  onStart: function () { },
-  onComplete: function () { },
-  numberFormatter:
-    function (number) {
-      return "$ " + number;
-    }
-});
->>>>>>> 5276281b8647c4747a8644dface934fdf2f6bbaf
 
 $("#counter3").counter({
   autoStart: true,

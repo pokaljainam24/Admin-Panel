@@ -190,8 +190,8 @@ h2 {
   width: 100%;
   height: 100vh;
   display: flex;
-  overflow: hidden;
-  /* overflow:scroll; */
+  overflow: scroll;
+  /* position: fixed; */
 }
 
 #sidebar {
@@ -271,11 +271,16 @@ p{
 
 /* -----------------------------------------------------------CONTENT-CARD-FORMS---------------------------------------------------------------------- */
 
+#forms{
+  background: linear-gradient(rgba(54, 46, 203, 0.792) 0%, rgba(9, 9, 121, 0.594) 35%, rgba(0, 212, 255, 1) 100%);
+  padding: 10px; 
+}
 
 .Container {
-  max-width: 400px;
+  max-width: 600px;
   margin: 50px auto;
-  background-color: #ffffff;
+  margin-top: 100px;
+  backdrop-filter: blur(20px);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -333,7 +338,7 @@ h2 {
 /* ------------------------------ CHART SECTION ------------------------------------------------------------------ */
 
 #charts{
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 
@@ -344,7 +349,8 @@ h2 {
   justify-content: space-between;
   padding: 10px;
   gap: 20px;
-  margin-top: 70px;
+  /* margin-top: 70px; */
 }
+
 
 
