@@ -354,23 +354,23 @@ $("#counter").counter({
   //   }
 });
 
-$("#counter2").counter({
-  autoStart: true,          
-  duration: 1000,          
-  countFrom: 10,    
-  countTo: 180900,               
-  runOnce: false,    
-  placeholder: "$180,900",     
+// $("#counter2").counter({
+//   autoStart: true,          
+//   duration: 1000,          
+//   countFrom: 10,    
+//   countTo: 180900,               
+//   runOnce: false,    
+//   placeholder: "$180,900",     
                       
-  easing: "easeOutCubic",     
+//   easing: "easeOutCubic",     
                               
-  onStart: function() {},     
-  onComplete: function() {},  
-  numberFormatter:            
-    function(number) {
-      return "$ " + number;
-    }
-});
+//   onStart: function() {},     
+//   onComplete: function() {},  
+//   numberFormatter:            
+//     function(number) {
+//       return "$ " + number;
+//     }
+// });
 
 $("#counter3").counter({
   autoStart: true,          
