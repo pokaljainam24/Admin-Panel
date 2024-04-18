@@ -11,11 +11,11 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./calendar.js.css">
 
+    <link rel="stylesheet" href="./style.css">
     <title>Admin Panel</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -54,8 +54,8 @@
                 <i class="fa-solid fa-user-shield"></i>Authentication
             </button>
 
-            <button id="pagesBtn">
-                <i class="fa-regular fa-file"></i>Pages
+            <button for="#events" id="pagesBtn">
+                <i class="fa-regular fa-file"></i>Events
             </button>
 
             <button id="userBtn">
@@ -67,7 +67,7 @@
             </button>
         </div>
 
-    <!------------------------------------------------------------ Right Side HEADER  ------------------------------------------------------------>
+        <!------------------------------------------------------------ Right Side HEADER  ------------------------------------------------------------>
 
         <div id="content">
 
@@ -78,7 +78,8 @@
                     <div class="links">
 
                         <i class="fa-solid fa-pen-nib"
-                            style="margin: auto; font-size: 1.5rem; padding: 10px; color: red;"></i>
+                            style="margin: auto; font-size: 1.5rem; padding: 10px; color: red;">
+                        </i>
 
                         <span id="span1">
                             <button style="background-color: black; color: white; border: none;"><i
@@ -127,276 +128,188 @@
 
             </header>
 
-    <!------------------------------------------- RIGHT CONTAINER CONTENT DETAILS ---------------------------------------------------------------->
+            <!------------------------------------------- RIGHT CONTAINER CONTENT DETAILS ---------------------------------------------------------------->
 
 
             <div id="dashboard">
-                <div class="card">
-                    <div class="content">
+                <div id="cardcntr">
+                    <div class="card">
+                        <div class="content">
 
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="icon-big text-center" style="font-size: 2rem;">
-                                    <i class="teal fas fa-shopping-cart" style="color: blue;"></i>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="icon-big text-center" style="font-size: 3rem; cursor: pointer;">
+                                        <i class="teal fas fa-shopping-cart" style="color: blue;"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-8">
+                                    <div class="detail text-center">
+                                        <h4>New Orders</h4>
+                                        <span id="counter">6,267</span>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-sm-8">
-                                <div class="detail text-center">
-                                    <p>New Orders</p>
-                                    <span id="counter">6,267</span>
+                            <div class="footer">
+                                <hr><br>
+                                <div class="stats">
+                                    <i class="fas fa-redo-alt"></i><span class="end">Updated every 30 minutes</span>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="footer">
-                            <hr><br>
-                            <div class="stats">
-                                <i class="fas fa-redo-alt"></i><span class="end">Updated every 30 minutes</span>
+                    <div class="card">
+                        <div class="content">
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="icon-big text-center" style="font-size: 3rem;">
+                                        <i class="fa-solid fa-money-bill-1"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-8">
+                                    <div class="detail text-center">
+                                        <h4>Total Revenue</h4>
+                                        <span id="counter2">$180,900.00</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer">
+                                <hr><br>
+                                <div class="stats">
+                                    <i class="fa-solid fa-calendar"></i><span class="end">In this current Month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="content">
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="icon-big text-center" style="font-size: 3rem;">
+                                        <i class="fa-solid fa-eye" style="color: darkslateblue;"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-8">
+                                    <div class="detail text-center">
+                                        <h4>All Page views</h4>
+                                        <span id="counter3">28,210</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer">
+                                <hr><br>
+                                <div class="stats">
+                                    <i class="fa-solid fa-stopwatch"></i><span class="end">In the last 24 Hour</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="content">
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="icon-big text-center" style="font-size: 3rem;">
+                                        <i class="fa-solid fa-envelope" style="color: #ffb10a;"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-8">
+                                    <div class="detail text-center">
+                                        <h4>ALL Request</h4>
+                                        <span id="counter4">2,210</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer">
+                                <hr><br>
+                                <div class="stats">
+                                    <i class="fa-solid fa-envelope-open-text"></i><span class="end">Active in the last 7
+                                        days</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="content">
-
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="icon-big text-center" style="font-size: 2rem;">
-                                    <i class="fa-solid fa-money-bill-1"></i>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-8">
-                                <div class="detail text-center">
-                                    <p>Revenue</p>
-                                    <span id="counter2">$180,900</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="footer">
-                            <hr><br>
-                            <div class="stats">
-                                <i class="fa-solid fa-calendar"></i><span class="end">In this current Month</span>
-                            </div>
-                        </div>
-                    </div>
+                <div id="charts">
+                    <div id="chart1"></div>
+                    <div id="chart2"></div>
                 </div>
-
-                <div class="card">
-                    <div class="content">
-
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="icon-big text-center" style="font-size: 2rem;">
-                                    <i class="fa-solid fa-eye" style="color: darkslateblue;"></i>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-8">
-                                <div class="detail text-center">
-                                    <p>Page views</p>
-                                    <span id="counter3">28,210</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="footer">
-                            <hr><br>
-                            <div class="stats">
-                                <i class="fa-solid fa-stopwatch"></i><span class="end">In the last 24 Hour</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
 
-    <!-------------------------------------------------------------- FORMS SECTION---------------------------------------------------------------->
+            <!-------------------------------------------------------------- FORMS SECTION---------------------------------------------------------------->
 
             <div id="forms">
-                <div class="Container">
-                    <h2>Form Validation</h2>
-                    <form id="myForm" action="#" method="post">
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name">
-                            <span class="error-message" id="nameError"></span>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email">
-                            <span class="error-message" id="emailError"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="age">Age:</label>
-                            <input type="number" id="age" name="age">
-                            <span class="error-message" id="ageError"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="gender">Gender:</label>
-                            <select id="gender" name="gender">
-                                <option value="">Select Gender</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                                <option value="other">Other</option>
-                            </select>
-                            <span class="error-message" id="genderError"></span>
-                        </div>
-
-                        <button type="submit" class="submit-btn">Submit</button>
-                    </form>
-                </div>
             </div>
 
-    <!-------------------------------------------------------------- TABLES SECTION -------------------------------------------------------------->
+            <!-------------------------------------------------------------- TABLES SECTION -------------------------------------------------------------->
 
             <div id="tables">
                 <img height="100%" width="100%" src="./images/466010-PFZ4RS-198.jpg" alt="img">
             </div>
 
-    <!--------------------------------------------------------------- CHARTS SECTION ------------------------------------------------------------->
+            <!--------------------------------------------------------------- CHARTS SECTION ------------------------------------------------------------->
 
-            <div id="charts">
 
-                <div class="row">
-
-                    <div class="col-md-6" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.596);">
-                        <div class="card" style="padding: 20px; ">
-                            <div class="card-header">polarArea</div>
-
-                            <div class="card-body">
-                                <div class="canvas-wrapper">
-                                    <div class="chartjs-size-monitor">
-                                        <div class="chartjs-size-monitor-expand">
-
-                                        </div>
-                                        <div class="chartjs-size-monitor-shrink">
-
-                                        </div>
-                                    </div>
-
-                                    <canvas class="chart chartjs-render-monitor" id="polarArea"
-                                        style="width: 500px; height: 200px; padding: 10px; margin: auto;">
-                                    </canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.596);">
-                        <div class="card" style="padding:20px">
-                            <div class="card-header">Line Chart</div>
-
-                            <div class="card-body">
-                                <div class="canvas-wrapper">
-                                    <div class="chartjs-size-monitor">
-                                        <div class="chartjs-size-monitor-expand">
-
-                                        </div>
-                                        <div class="chartjs-size-monitor-shrink">
-
-                                        </div>
-                                    </div>
-
-                                    <canvas class="chart chartjs-render-monitor" id="linechart"
-                                        style="width: 600px; height: 500px; padding: 10px; margin: auto;">
-                                    </canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.596);">
-                        <div class="card" style="padding: 20px;">
-                            <div class="card-header">Stacked Bar Chart</div>
-
-                            <div class="card-body">
-                                <div class="canvas-wrapper">
-                                    <div class="chartjs-size-monitor">
-                                        <div class="chartjs-size-monitor-expand"></div>
-                                        <div class="chartjs-size-monitor-shrink"></div>
-                                    </div>
-
-                                    <canvas class="chart chartjs-render-monitor" id="stackedbarchart"
-                                        style="width: 600px; height: 500px; padding: 10px; margin: auto;">
-                                    </canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.726);">
-                        <div class="card" style="padding: 20px;">
-                            <div class="card-header">Donut Chart</div>
-
-                            <div class="card-body">
-                                <div class="canvas-wrapper">
-                                    <div class="chartjs-size-monitor">
-                                        <div class="chartjs-size-monitor-expand">
-
-                                        </div>
-                                        <div class="chartjs-size-monitor-shrink">
-
-                                        </div>
-                                    </div>
-
-                                    <canvas class="chart chartjs-render-monitor" id="doughnutchart"
-                                        style="width: 500px; height: 400px; padding: 10px; margin: auto;">
-                                    </canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-   
-            </div>
 
             <div id="icons">
-                <img height="100%" width="100%" src="./images/Screenshot_17-4-2024_14913_fontawesome.com.jpeg" alt="img" style="margin-top: 50px;">
+                <img height="100%" width="100%" src="./images/Screenshot_17-4-2024_14913_fontawesome.com.jpeg" alt="img"
+                    style="margin-top: 100px; padding: 10px;">
             </div>
 
             <div id="uielements">Hello UI Elements</div>
             <div id="authentication">Hello Authentication</div>
-            <div id="pages">Hello Pages</div>
+
+            <div id="events">
+                <div id="calendar"></div>
+            </div>
+
             <div id="user">Hello User</div>
             <div id="Settings">Hello Settings</div>
         </div>
 
-        <div class="container">
+        <!---------------------------------------------------------- CONTENT FORM POPUP ------------------------------------------------------------------>
 
-            <h2>Login</h2>
+        <section id="form">
+            <section id="background-blur">
+                <section id="thin-black-sheet"></section>
+            </section>
+            <form>
 
-            <form id="loginForm" action="#" method="post">
-
-                <div class="form-group">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your username">
+                <div class="form-inner-div">
+                    <label for="email">email address</label>
+                    <input type="email" id="email">
                 </div>
 
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                <div class="form-inner-div">
+                    <div class="form-internal-div">
+                        <label for="password">Password</label>
+
+                        <a href="https://www.website.com/forgot-password/?source=SC&country=IN"
+                            style="color: white;">forgot password</a>
+                    </div>
+
+                    <input type="email">
                 </div>
 
-                <button type="submit" class="submit-btn">Login</button>
-
-                <div class="form-footer">
-                    <a href="#">Forgot password?</a> | <a href="#">Create an account</a>
-                </div>
-
+                <input type="submit" placeholder="login" id="form-submit">
             </form>
+        </section>
 
-            <div class="modelbg"></div>
-
-        </div>
     </div>
 
 
@@ -411,7 +324,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
     <script src="./counter.js"></script>
+    <script src="./calendar.js"></script>
     <script src="./script.js"></script>
 </body>
 
