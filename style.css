@@ -116,7 +116,7 @@ hr {
 
 
 
-/* ------------------------------------------------------LOGIN FORM-------------------------------------------------------- */
+/* ------------------------------------------------------FORM SECTION-------------------------------------------------------- */
 
 
 
@@ -184,7 +184,7 @@ hr {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.997);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.997); */
 }
 
 #dashboard>.card>.div {
@@ -229,16 +229,34 @@ span>.end {
   font-weight: bold;
 }
 
-/* FOOTER CARD CONTENT */
+/*------ DASHBOARD CHARTS ------*/
+
+#charts {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  /* box-shadow: 0 0 10px rgba(41, 41, 41, 0.997); */
+}
+
+
+#chart1,
+#chart2 {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.997);
+  border-radius: 10px;
+}
+
+/*------ FOOTER CARD CONTENT------ */
 
 #footer-card{
   width: 100%;
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
   padding: 10px;
-  gap: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.997);
+  margin-top: 50px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.997); */
 }
 
 .text-center>i{
@@ -337,25 +355,6 @@ form>input {
   width: 100%;
 }
 
-
-/*------------------------------------------------------------------ DASHBOARD CHARTS ---------------------------------------------------------------------*/
-
-#charts {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 50px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(41, 41, 41, 0.997);
-}
-
-
-#chart1,
-#chart2 {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.997);
-  border-radius: 10px;
-}
 
 
 
