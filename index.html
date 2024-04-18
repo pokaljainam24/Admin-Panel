@@ -38,7 +38,7 @@
                 <i class="fa-solid fa-table"></i>Tables
             </button>
 
-            <button for="#charts" id="chartsBtn">
+            <button for="#chart" id="chartsBtn">
                 <i class="fa-solid fa-chart-area"></i>Charts
             </button>
 
@@ -46,7 +46,7 @@
                 <i class="fa-solid fa-icons"></i>Icons
             </button>
 
-            <button id="uielementsBtn">
+            <button for="#uielements" id="uielementsBtn">
                 <i class="fa-solid fa-layer-group"></i>UI Elements
             </button>
 
@@ -82,7 +82,8 @@
                         </i>
 
                         <span id="span1">
-                            <button style="background-color: black; color: white; border: none;"><i
+                            <button
+                                style="background-color: black; color: white; border: none; border-bottom: 1px solid rgb(255, 255, 255);"><i
                                     class="fa-solid fa-link"></i> Quick Links <i
                                     class="fa-solid fa-caret-down"></i></button>
                             <ul href="">
@@ -102,7 +103,8 @@
                         </span>
 
                         <span id="span2">
-                            <button style="background-color: black; color: white; border: none;">
+                            <button
+                                style="background-color: black; color: white; border: none; border-bottom: 1px solid rgb(255, 255, 255);">
                                 <i class="fa-solid fa-user-secret"></i> Jainam Pokal
                                 <i class="fa-solid fa-caret-down"></i>
                             </button>
@@ -264,24 +266,46 @@
 
             <!--------------------------------------------------------------- CHARTS SECTION ------------------------------------------------------------->
 
-            <div id="charts">
-                <div id="chart3"></div>
+            <div id="chart">
+                <div id="chartctnr">
+                    <div id="chart3"></div>
+                    <div id="chart4"></div>
+                    <div id="chart5"></div>
+                    <div id="chart6"></div>
+                    <div id="chart7"></div>
+                </div>
             </div>
 
+            <!---------------------------------------------------------------- ICONS SECTION ------------------------------------------------------------->
 
             <div id="icons">
                 <img height="100%" width="100%" src="./images/Screenshot_17-4-2024_14913_fontawesome.com.jpeg" alt="img"
                     style="margin-top: 100px; padding: 10px;">
             </div>
 
-            <div id="uielements">Hello UI Elements</div>
+            <!------------------------------------------------------------- UI ELEMENTS SECTION ---------------------------------------------------------->
+
+            <div id="uielements">
+                <img height="100%" width="100%" src="./images/6352243.jpg" alt="img"
+                    style="margin-top: 70px; padding: 10px;">
+            </div>
+
+            <!----------------------------------------------------------- AUTHENTICATION SECTION --------------------------------------------------------->
+
             <div id="authentication">Hello Authentication</div>
+
+            <!--------------------------------------------------------------- EVENT SECTION -------------------------------------------------------------->
 
             <div id="events">
                 <div id="calendar"></div>
             </div>
 
+            <!---------------------------------------------------------------- USER SECTION -------------------------------------------------------------->
+
             <div id="user">Hello User</div>
+
+            <!-------------------------------------------------------------- SETTINGS SECTION ------------------------------------------------------------>
+
             <div id="Settings">Hello Settings</div>
         </div>
 
@@ -294,7 +318,7 @@
             <form>
 
                 <div class="form-inner-div">
-                    <label for="email">email address</label>
+                    <label for="email">Email Address</label>
                     <input type="email" id="email">
                 </div>
 
@@ -303,7 +327,7 @@
                         <label for="password">Password</label>
 
                         <a href="https://www.website.com/forgot-password/?source=SC&country=IN"
-                            style="color: white;">forgot password</a>
+                            style="color: white;">Forgot Password</a>
                     </div>
 
                     <input type="email">

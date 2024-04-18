@@ -58,7 +58,7 @@ span {
   display: flex;
   gap: 10px;
   align-items: center;
-  margin-right: 500px;
+  margin-right: 400px;
 }
 
 nav {
@@ -328,3 +328,23 @@ form>input {
 }
 
 
+
+/*-------------------------------------------------------------------- CHART SECTION -----------------------------------------------------------*/
+
+#chart{
+  margin-top: 80px;
+  gap: 100px;
+}
+
+#chart>#chartctnr{
+  width: 100%;
+}
+
+#chartctnr{
+  padding: 20px;
+}
+
+
+#chartctnr>div{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.997);
+} 
