@@ -20,6 +20,7 @@ $(".fa-solid").on("click", function () {
   })
 });
 
+
 //////////////////////// navbar links mouseover-leave color effect////////////////////////////////////////////////////
 
 $("#span1,#span2").on("mouseenter", function () {
