@@ -11,6 +11,8 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
+
     <link rel="stylesheet" href="./calendar.js.css">
 
     <link rel="stylesheet" href="./style.css">
@@ -30,7 +32,7 @@
                 <i class="fa-solid fa-house-user"></i>Dashboard
             </button>
 
-            <button for=".wrapper" id="formsBtn">
+            <button for=".form-container" id="formsBtn">
                 <i class="fa-solid fa-file"></i>Forms
             </button>
 
@@ -50,7 +52,7 @@
                 <i class="fa-solid fa-layer-group"></i>UI Elements
             </button>
 
-            <button id="authenticationBtn">
+            <button for="#authentication" id="authenticationBtn">
                 <i class="fa-solid fa-user-shield"></i>Authentication
             </button>
 
@@ -58,11 +60,11 @@
                 <i class="fa-regular fa-file"></i>Events
             </button>
 
-            <button id="userBtn">
+            <button for="#user" id="userBtn">
                 <i class="fa-solid fa-users"></i>Users
             </button>
 
-            <button id="SettingsBtn">
+            <button for="#Settings" id="SettingsBtn">
                 <i class="fa-solid fa-gears"></i>Settings
             </button>
         </div>
@@ -245,10 +247,126 @@
                     </div>
                 </div>
 
+                <!-- 2 CHARTS -->
+
                 <div id="charts">
                     <div id="chart1"></div>
                     <div id="chart2"></div>
                 </div>
+
+                <!-- 2 TABLE -->
+
+                <div id="tablecntr">
+                    <div id="table1">
+                        <h2>Top Visitors by Country</h2>
+                        <p>Your year long website traffic data</p>
+                        <table cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Unique Visitors</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><i class="fi fi-us"></i> United States</td>
+                                    <td class="text-right">27,340</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-in"></i> India</td>
+                                    <td class="text-right">21,280</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-jp"></i> Japan</td>
+                                    <td class="text-right">18,210</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-gb"></i> United Kingdom</td>
+                                    <td class="text-right">15,176</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-es"></i> Spain</td>
+                                    <td class="text-right">14,276</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-de"></i> Germany</td>
+                                    <td class="text-right">13,176</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-br"></i> Brazil</td>
+                                    <td class="text-right">12,176</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-id"></i> Indonesia</td>
+                                    <td class="text-right">11,886</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-ph"></i> Philippines</td>
+                                    <td class="text-right">11,509</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-sg"></i> Singapore</td>
+                                    <td class="text-right">1,700</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="table2">
+                        <h2>Most Sales by Country</h2>
+                        <p>Your year long sales data</p>
+                        <table cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Unique Visitors</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><i class="fi fi-us"></i> United States</td>
+                                    <td class="text-right">27,340</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-in"></i> India</td>
+                                    <td class="text-right">21,280</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-jp"></i> Japan</td>
+                                    <td class="text-right">18,210</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-gb"></i> United Kingdom</td>
+                                    <td class="text-right">15,176</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-es"></i> Spain</td>
+                                    <td class="text-right">14,276</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-de"></i> Germany</td>
+                                    <td class="text-right">13,176</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-br"></i> Brazil</td>
+                                    <td class="text-right">12,176</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-id"></i> Indonesia</td>
+                                    <td class="text-right">11,886</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-ph"></i> Philippines</td>
+                                    <td class="text-right">11,509</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fi fi-sg"></i> Singapore</td>
+                                    <td class="text-right">1,700</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- FOOTER CARD -->
 
                 <div id="footer-card">
                     <div class="content1">
@@ -265,8 +383,8 @@
                         <div class="row1">
                             <div class="text-center">
                                 <i class="fa-solid fa-reply-all" style="color: #ff8800;"></i>
-                                <h4 class="mb-0">+21,900</h4>
-                                <p class="text-muted">FACEBOOK PAGE LIKES</p>
+                                <h4 class="mb-0">+22,566</h4>
+                                <p class="text-muted">INSTAGRAM FOLLOWERS</p>
                             </div>
                         </div>
                     </div>
@@ -275,8 +393,8 @@
                         <div class="row1">
                             <div class="text-center">
                                 <i class="fa-solid fa-envelope"></i>
-                                <h4 class="mb-0">+21,900</h4>
-                                <p class="text-muted">FACEBOOK PAGE LIKES</p>
+                                <h4 class="mb-0">+15,566</h4>
+                                <p class="text-muted">E-MAIL SUBSCRIBERS</p>
                             </div>
                         </div>
                     </div>
@@ -285,8 +403,8 @@
                         <div class="row1">
                             <div class="text-center">
                                 <i class="fa-solid fa-dollar-sign" style="color: #a1bd14;"></i>
-                                <h4 class="mb-0">+21,900</h4>
-                                <p class="text-muted">FACEBOOK PAGE LIKES</p>
+                                <h4 class="mb-0">+98,601</h4>
+                                <p class="text-muted">TOTAL SALES</p>
                             </div>
                         </div>
                     </div>
@@ -296,7 +414,29 @@
 
             <!-------------------------------------------------------------- FORMS SECTION---------------------------------------------------------------->
 
-           
+            <div class="form-container">
+                <h2>Sign In</h2>
+                <form class="form-container" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Sign In</button>
+                    </div>
+                    <div class="form-group forgot-password">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <div class="form-group signup-link">
+                        Don't have an account? <a href="#">Sign Up</a>
+                    </div>
+                </form>
+            </div>
+
 
             <!-------------------------------------------------------------- TABLES SECTION -------------------------------------------------------------->
 
@@ -332,21 +472,45 @@
 
             <!----------------------------------------------------------- AUTHENTICATION SECTION --------------------------------------------------------->
 
-            <div id="authentication">Hello Authentication</div>
+            <div id="authentication">
+                <div class="auth-container">
+                    <h2>Authentication Required</h2>
+                    <form action="authenticate.php" method="post">
+                        <div class="input-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <input id="btn" type="submit" value="Authenticate">
+                    </form>
+                </div>
+            </div>
 
             <!--------------------------------------------------------------- EVENT SECTION -------------------------------------------------------------->
 
-            <div id="events">
-                <div id="calendar"></div>
+            <div id="events" class="example">
+                <h2>Schedule Your Events</h2>
+                <div id="calendercntr">
+                    <div id="calendar"></div>
+                </div>
             </div>
 
             <!---------------------------------------------------------------- USER SECTION -------------------------------------------------------------->
 
-            <div id="user">Hello User</div>
+            <div id="user">
+                <img height="100%" width="100%" src="./images/Screenshot_18-4-2024_143536_www.jqueryscript.net.jpeg" alt="img"
+                    style="margin-top: 70px; padding: 10px;">
+            </div>
 
             <!-------------------------------------------------------------- SETTINGS SECTION ------------------------------------------------------------>
 
-            <div id="Settings">Hello Settings</div>
+            <div id="Settings">
+                <img height="100%" width="100%" src="./images/settings.png" alt="img"
+                    style="margin-top: 70px; padding: 10px;">
+            </div>
         </div>
 
         <!---------------------------------------------------------- CONTENT FORM POPUP ------------------------------------------------------------------>
