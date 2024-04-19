@@ -48,79 +48,117 @@ $("#form").on("click", function(){
 
 var options = {
   series: [{
-    name: "Desktops",
-    data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
-  }],
+  name: 'Inflation',
+  data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2]
+}],
   chart: {
-   
-    type: 'line',
-    zoom: {
-      enabled: false
-    }
-  },
-
-  responsive: [{
-    breakpoint: 880,
-    options: {
-      chart: {
-        width: 400,
-        height:300
-      },
-      legend: {
-        position: 'bottom'
-      }
-    }
-  },{
-    breakpoint: 1180,
-    options: {
-      chart: {
-        width: 500,
-        height:350
-      },
-      legend: {
-        position: 'bottom'
-      }
-    }
-  }],
-  
-  dataLabels: {
-    enabled: false
-  },
-  stroke: {
-    curve: 'straight'
-  },
-  title: {
-    text: 'Product Trends by Month',
-    align: 'left'
-  },
-  grid: {
-    row: {
-      colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-      opacity: 0.5
+  height: 350,
+  type: 'bar',
+},
+plotOptions: {
+  bar: {
+    borderRadius: 10,
+    dataLabels: {
+      position: 'top', // top, center, bottom
     },
-  },
-  xaxis: {
-    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
   }
-};
+},
+dataLabels: {
+  enabled: true,
+  formatter: function (val) {
+    return val + "%";
+  },
+  offsetY: -20,
+  style: {
+    fontSize: '12px',
+    colors: ["#304758"]
+  }
+},
 
-//   CHART-2  //
+xaxis: {
+  categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  position: 'top',
+  axisBorder: {
+    show: false
+  },
+  axisTicks: {
+    show: false
+  },
+  crosshairs: {
+    fill: {
+      type: 'gradient',
+      gradient: {
+        colorFrom: '#D8E3F0',
+        colorTo: '#BED1E6',
+        stops: [0, 100],
+        opacityFrom: 0.4,
+        opacityTo: 0.5,
+      }
+    }
+  },
+  tooltip: {
+    enabled: true,
+  }
+},
+yaxis: {
+  axisBorder: {
+    show: false
+  },
+  axisTicks: {
+    show: false,
+  },
+  labels: {
+    show: false,
+    formatter: function (val) {
+      return val + "%";
+    }
+  }
+
+},
+title: {
+  text: 'Monthly Inflation in Argentina, 2002',
+  floating: true,
+  offsetY: 330,
+  align: 'center',
+  style: {
+    color: '#444'
+  }
+}
+};
 
 var chart = new ApexCharts(document.querySelector("#chart1"), options);
 chart.render();
 
+//   CHART-2  //
+
 var options = {
-  series: [44, 55, 13, 43, 22],
+  series: [{
+  data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
+}],
   chart: {
-   
-    type: 'pie',
-  },
-  labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
-  
+  type: 'bar',
+  height: 350
+},
+plotOptions: {
+  bar: {
+    borderRadius: 4,
+    horizontal: true,
+  }
+},
+dataLabels: {
+  enabled: false
+},
+xaxis: {
+  categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan',
+    'United States', 'China', 'Germany'
+  ],
+}
 };
 
 var chart = new ApexCharts(document.querySelector("#chart2"), options);
 chart.render();
+
+
 
 
 
