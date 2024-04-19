@@ -222,6 +222,7 @@ hr {
 /* ---------------------------------------------------------CONTENT-CARD-DASHBOARD-------------------------------------------------- */
 
 #dashboard {
+  /* border: 1px solid #000; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -235,7 +236,6 @@ hr {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.997); */
 }
 
 #dashboard>.card>.div {
@@ -246,6 +246,7 @@ hr {
   border-radius: 10px;
   padding: 20px;
   width: 100%;
+  /* gap: 10px; */
   background-color: #f8f8f8;
   box-shadow: 0 0 10px rgb(0, 0, 0);
   color: #000000;
@@ -280,16 +281,46 @@ span>.end {
   font-weight: bold;
 }
 
+@media (max-width: 880px) {
+  #cardcntr {
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    margin-top: 30px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1180px) {
+  #cardcntr {
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    margin-top: 30px;
+    gap: 20px;
+  }
+
+  .card>.content {
+    width: 80%;
+  }
+
+
+}
+
+
 /*------ DASHBOARD CHARTS ------*/
 
 #charts {
   width: 100%;
+  /* border: 1PX solid green; */
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 50px;
-  padding: 20px;
-  /* box-shadow: 0 0 10px rgba(41, 41, 41, 0.997); */
+  margin-top: 40px;
+  margin-bottom: 40px;
+
 }
 
 
@@ -297,6 +328,37 @@ span>.end {
 #chart2 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.997);
   border-radius: 10px;
+  height: 400px;
+  width: 600px;
+}
+
+
+@media (max-width: 880px) {
+
+  #charts {
+    width: auto;
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  #chart1,
+  #chart2 {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.997);
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 1400px) {
+
+  #charts {
+    gap: 20px;
+  }
+
+  #chart1,
+  #chart2 {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.997);
+    border-radius: 10px;
+  }
 }
 
 /*------- DASHBOARD TABLE ---------*/
@@ -304,8 +366,8 @@ span>.end {
 #tablecntr {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: space-around;
+  /* padding: 20px; */
   background-color: #f1f1f1;
   gap: 10px;
 }
@@ -316,8 +378,9 @@ span>.end {
   background-color: white;
   width: 47%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.997);
-
+  border-radius: 10px;
 }
+
 table {
   width: 100%;
   color: #212529;
@@ -335,29 +398,63 @@ td {
   border-top: 1px solid #dee2e6;
   padding: 10px 5px;
 }
+
 .text-right {
   text-align: right;
 }
 
+@media (max-width: 880px) {
+  #tablecntr {
+    width: 100%;
+    gap: 35px;
+    flex-direction: column;
+  }
+
+  #table1,
+  #table2 {
+    padding: 50px;
+    background-color: white;
+    width: 87%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.997);
+    margin: auto;
+  }
+}
+
+@media (max-width: 1180px) {
+  #tablecntr {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px;
+  }
+
+  #table1,
+  #table2 {
+    padding: 50px;
+    background-color: white;
+    width: 87%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.997);
+    margin: auto;
+  }
+}
+
 /*------ FOOTER CARD CONTENT------ */
 
-#footer-card{
+#footer-card {
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 10px;
   margin-top: 50px;
   gap: 10px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.997); */
 }
 
-.text-center>i{
+.text-center>i {
   display: flex;
   justify-content: center;
   font-size: 3rem;
 }
 
-.content1{
+.content1 {
   width: 20%;
   text-align: center;
   padding: 40px;
@@ -366,11 +463,36 @@ td {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.997);
 }
 
-.text-muted{
+.text-muted {
   font-weight: bold;
 }
 
+@media (max-width: 880px) {
+  #footer-card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    margin-top: 30px;
+    gap: 20px;
+  }
+}
 
+@media (max-width: 1180px) {
+  #footer-card {
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    margin-top: 30px;
+    gap: 20px;
+  }
+
+  .content1 {
+    width: 80%;
+  }
+
+}
 
 /* -----------------------------------------------------------POPUP-CARD-FORMS---------------------------------------------------------------------- */
 
@@ -516,7 +638,7 @@ h2 {
   cursor: pointer;
 }
 
-#btn{
+#btn {
   padding: 5px;
   background-color: #2ec4ffd7;
 }
@@ -531,7 +653,7 @@ h2 {
   margin: auto;
 }
 
-#events > h2 {
+#events>h2 {
   line-height: 50px;
   text-align: center;
 }

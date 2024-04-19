@@ -39,6 +39,9 @@ $(".fa-pen-nib").on("click", function () {
   $("#form").toggle();
 })
 
+$("#form").on("click", function(){
+  $("#form").toggle();
+})
 
 
 // DASHBOARD CHARTS -----------------------------------------------------------------------------
@@ -49,13 +52,37 @@ var options = {
     data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
   }],
   chart: {
-    height: 500,
-    width: 700,
+   
     type: 'line',
     zoom: {
       enabled: false
     }
   },
+
+  responsive: [{
+    breakpoint: 880,
+    options: {
+      chart: {
+        width: 400,
+        height:300
+      },
+      legend: {
+        position: 'bottom'
+      }
+    }
+  },{
+    breakpoint: 1180,
+    options: {
+      chart: {
+        width: 500,
+        height:350
+      },
+      legend: {
+        position: 'bottom'
+      }
+    }
+  }],
+  
   dataLabels: {
     enabled: false
   },
@@ -85,21 +112,11 @@ chart.render();
 var options = {
   series: [44, 55, 13, 43, 22],
   chart: {
-    width: 700,
+   
     type: 'pie',
   },
   labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
-  responsive: [{
-    breakpoint: 480,
-    options: {
-      chart: {
-        width: 200
-      },
-      legend: {
-        position: 'bottom'
-      }
-    }
-  }]
+  
 };
 
 var chart = new ApexCharts(document.querySelector("#chart2"), options);
