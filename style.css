@@ -304,7 +304,7 @@ span>.end {
   }
 
   .card>.content {
-    width: 80%;
+    width: 90%;
   }
 
 
@@ -357,8 +357,9 @@ span>.end {
 
   #chart1,
   #chart2 {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.997);
-    border-radius: 10px;
+    padding: 10px;
+    height: 400px;
+    width: 650px;
   }
 }
 

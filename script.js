@@ -39,9 +39,10 @@ $(".fa-pen-nib").on("click", function () {
   $("#form").toggle();
 })
 
-$("#form").on("click", function(){
-  $("#form").toggle();
-})
+// $("#form").on("click", function(){
+//   $("#form").toggle(show);
+//   $("#form").toggle();
+// })
 
 
 // DASHBOARD CHARTS -----------------------------------------------------------------------------
