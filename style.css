@@ -217,12 +217,42 @@ hr {
   color: #000;
 }
 
+#rs{
+  font-size: 1.5rem;
+}
+
+#symbol{
+  font-size: 2rem;
+}
+
+
+
+@media (max-width: 880px) {
+  #rs {
+    display: none;
+    text-align: center;
+  }
+
+  #symbol{
+    margin: auto;
+  }
+}
+
+@media (max-width: 1180px) {
+  #rs {
+    display: none;
+    text-align: center;
+  }
+
+  #symbol{
+    margin: auto;
+  }
+}
 
 
 /* ---------------------------------------------------------CONTENT-CARD-DASHBOARD-------------------------------------------------- */
 
 #dashboard {
-  /* border: 1px solid #000; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -247,7 +277,6 @@ hr {
   border-radius: 10px;
   padding: 20px;
   width: 100%;
-  /* gap: 10px; */
   background-color: #f8f8f8;
   box-shadow: 0 0 10px rgb(0, 0, 0);
   color: #000000;
@@ -306,8 +335,6 @@ span>.end {
   .card>.content {
     width: 90%;
   }
-
-
 }
 
 
@@ -315,7 +342,6 @@ span>.end {
 
 #charts {
   width: 100%;
-  /* border: 1PX solid green; */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -349,14 +375,16 @@ span>.end {
   }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1180px) {
 
   #charts {
+    flex-direction: column;
     gap: 20px;
   }
 
   #chart1,
   #chart2 {
+    gap: 10px;
     padding: 10px;
     height: 400px;
     width: 650px;
