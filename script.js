@@ -37,7 +37,7 @@ $("#span1,#span2").on("mouseleave", function () {
 $("#form").hide();
 $(".fa-pen-nib").on("click", function () {
   $("#form").toggle();
-})
+});
 
 // $("#form").on("click", function(){
 //   $("#form").toggle(show);
